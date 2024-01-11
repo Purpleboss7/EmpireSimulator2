@@ -1,0 +1,19 @@
+_G.Loop = true
+while _G.Loop and task.wait(3.0) do
+    local args = {
+        [1] = {
+            ["Action"] = "Sold"
+        }
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.GuiEvent:FireServer(unpack(args))
+end
+
+local args = {
+    [1] = {
+        ["Action"] = "EquipTool",
+        ["ToolName"] = "Cyber Pickaxe"
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.GuiEvent:FireServer(unpack(args))
